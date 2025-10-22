@@ -1,12 +1,12 @@
 import axios from 'axios';
 
 export const client = axios.create({
-    baseURL: "https://jsonplaceholder.typicode.com/posts"
+    baseURL: "http://127.0.0.1:5000/consultar"
 })
 
 export interface ResponseAPI {
-    userId: number;
-    id: number;
-    title: string;
-    body: string;
+    marca: string;
+    modelo: string;
+    año: number;
 }
+

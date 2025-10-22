@@ -1,0 +1,19 @@
+.grid {
+    display: grid;
+    grid-template-areas: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 12px;
+    border-Radius: 30px;
+    box-Shadow: 2px 2px 12px rgba(255, 255, 255, 0.45);
+    background: linear-gradient(5deg, #fff, #000);
+    color: #000;
+    font-Size: 20px;
+}  

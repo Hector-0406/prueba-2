@@ -7,10 +7,10 @@ const App = () => {
 
   return (
     <div>
-      {/* <GetPost /> */}
+      <GetPost />
       {/* <CreatePost/> */}
       {/* <UpdatePost/> */}
-      <DeletePost/>
+      {/* <DeletePost/> */} 
     </div>
   )
 }

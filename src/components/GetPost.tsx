@@ -1,16 +1,14 @@
 import { useState, useEffect } from 'react';
 import { ResponseAPI } from '../api/client';
 import { getPosts } from '../utils/getData';
+import './estilos.css';
 
 export const GetPost = () => {
 
     const [posts, setPosts] = useState<ResponseAPI[]>([])
 
     useEffect(() => {
-        // You can implement a <Loading/>
-        //  start loading
         getPosts().then(data => setPosts(data))
-        //  finish loading
     }, [])
 
     return (
@@ -21,10 +19,10 @@ export const GetPost = () => {
             <div className='grid'>
                 {
                     posts.map(post => (
-                        <div key={post.id}>
-                            <p>Title: <span>{post.title}</span></p>
-                            <p>Body: <span>{post.body}</span></p>
-                            <p>User: <span>{post.userId}</span></p>
+                        <div key={post.marca} className='card' >
+                            <p>Marca: {post.marca}</p>
+                            <p>Modelo: {post.modelo}</p>
+                            <p>Año: {post.año}</p>
                         </div>
                     ))
                 }
@@ -32,3 +30,4 @@ export const GetPost = () => {
         </>
     )
 }
+
