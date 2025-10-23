@@ -13,8 +13,8 @@ export const GetPost = () => {
 
     return (
         <>
-            <h1>Get Post 👇</h1><br />
-            <h2>posts list</h2>
+            <h1>Vehiculos 👇</h1><br />
+            <h2>Lista de Vehiculos</h2>
 
             <div className='grid'>
                 {
@@ -30,4 +30,3 @@ export const GetPost = () => {
         </>
     )
 }
-
