@@ -9,24 +9,18 @@ html {
 }
 
 body {
-    background-color: #101010;
-    color: white;
+    background-color: #9DD6AD;
+    color: black;
     min-height: 100%;
 }
 
-h1, h2 {
+h1, h2, p {
     display:flex;
-    justify-content: center;
-}
-
-p {
-    display: flex;
     justify-content: center;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr)); 
     gap: 20px;
     width: calc(100% - 40px);
     max-width: 760px;
@@ -38,18 +32,32 @@ p {
     border: 1px solid #1e1e1e;
     border-radius: 15px;    
     font-size: 20px;    
-    background: linear-gradient(20deg, #fff, #000);
+    background: linear-gradient(20deg, #234fdf, #51c723);
     color: #000;
     width: 100%;       
     max-width: 340px;       
     padding: 16px 12px;
-    height: auto;            
+    height: auto;       
+    cursor: pointer;   
+    transition: transform 0.3s ease-in-out, box-shadow 0.3, ease-in-out;  
 } 
 
-/* pantallas chicas */
-@media (max-width: 600px) and (max-width: 899px) {
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(33, 2, 51, 1);
+}
+
+/* Mobile */
+@media (max-width: 599px) {
     .grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet */
+@media (min-width:600px) and (max-width:899px){
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
@@ -57,6 +65,5 @@ p {
 @media (min-width: 900px) {
     .grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 24px;
     }
 }
